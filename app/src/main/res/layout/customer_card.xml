@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
+    android:paddingTop="11dp"
+    android:padding="0dp"
+    android:background="@drawable/small_card_style">
+
+    <!--Small Box label-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/relativeSmallBox"
+        android:background="@drawable/small_box_style">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeProfileImage"
+            android:layout_weight="1"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            >
+            <ImageView
+                android:id="@+id/imageViewProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/user"
+                android:scaleType="fitXY"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/relativeProfileContent"
+            >
+    <!--authority name label-->
+    <TextView
+        android:id="@+id/textViewCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Golam Mostafa"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/textSize17sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColorTitleSmall"/>
+        <!--authority position title-->
+        <TextView
+            android:id="@+id/textViewCareOf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Principle"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/textSize12sp"
+            android:textColor="@color/textColorTitleSmall"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/textViewCustomerName"/>
+            <TextView
+                android:id="@+id/textViewAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Address 1"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/textSize12sp"
+                android:textColor="@color/textColorTitleSmall"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/textViewCareOf"/>
+
+        <!--mobile no title label-->
+    <TextView
+        android:id="@+id/textViewMobileNoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Mobile:"
+        android:textColor="@color/textColorTitleLarge"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/textViewCareOf"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <!--mobile no Label-->
+    <TextView
+        android:id="@+id/textViewMobileNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="01671340909"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textViewCareOf"
+        android:layout_toRightOf="@+id/textViewMobileNoTitle"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <!--email title label-->
+    <TextView
+        android:id="@+id/textViewEmailNoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Email:"
+        android:textColor="@color/textColorTitleLarge"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/textViewMobileNoTitle"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <!--email no Label-->
+    <TextView
+        android:id="@+id/textViewEmailNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="zahidul.islam@csinfotech.com"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textViewMobileNoTitle"
+        android:layout_toRightOf="@+id/textViewMobileNoTitle"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+    </RelativeLayout>
+        </LinearLayout>
+
+    <!--CALL SMS AND EMAIL label-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeSmallBox"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:layout_marginRight="5dp"
+        android:visibility="gone">
+    <ImageView
+        android:id="@+id/imageViewCall"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/close"/>
+        <ImageView
+            android:id="@+id/imageViewSMS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/close"
+            android:layout_toRightOf="@+id/imageViewCall"/>
+        <ImageView
+            android:id="@+id/imageViewEmail"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/close"
+            android:layout_toRightOf="@+id/imageViewSMS"/>
+
+    </RelativeLayout>
+</RelativeLayout>

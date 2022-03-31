@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Customer entry label-->
+            <LinearLayout
+                android:id="@+id/customerEntryForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/account_card_style1"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/textViewTitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="left"
+                    android:text="@string/customer"
+                    android:textColor="@color/textColorTitleLarge"
+                    android:textSize="@dimen/textSize12sp" />
+                <!--Customer Code & Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:minHeight="40dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".5"
+                        android:background="@drawable/disable_card_style">
+
+                        <EditText
+                            android:id="@+id/editTextCustomerCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:background="@color/textColorTitleLarge"
+                            android:backgroundTint="@android:color/transparent"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:hint="@string/code"
+                            android:minHeight="20dp"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize11sp" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:background="@drawable/small_card_style2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/editTextCustomerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:background="@color/md_red_900"
+                            android:backgroundTint="@android:color/transparent"
+                            android:gravity="center"
+                            android:hint="@string/name"
+                            android:minHeight="20dp"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize11sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/textViewCustomerAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="Address"
+                    android:textColor="@color/textColorTitleLarge"
+                    android:textSize="@dimen/textSize12sp" />
+                <!--Customer address-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:minHeight="40dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left">
+
+                        <EditText
+                            android:id="@+id/editTextCustomerAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:background="@color/textColorTitleLarge"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize11sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Order & delivery date entry label-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewOrderDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/orderDate"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/small_card_style2">
+
+                            <EditText
+                                android:id="@+id/editTextOrderDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/textColorTitleLarge"
+                                android:backgroundTint="@android:color/transparent"
+                                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                                android:drawableTint="@color/colorPrimary"
+                                android:editable="false"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewDeliveryDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/deliveryDate"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/small_card_style2">
+
+                            <EditText
+                                android:id="@+id/editTextDeliveryDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/md_red_900"
+                                android:backgroundTint="@android:color/transparent"
+                                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                                android:drawableTint="@color/colorPrimary"
+                                android:editable="false"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Payment & Order Ref  entry label-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPaymentMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/paymentMode"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/small_card_style2">
+
+                            <Spinner
+                                android:id="@+id/spinnerPaymentMode"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:fitsSystemWindows="true"
+                                android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingBottom="0dp"
+                                android:scrollbarSize="4dp"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewOrderRef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/orderRef"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/small_card_style2">
+
+                            <EditText
+                                android:id="@+id/editTextOrderRef"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/md_red_900"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--dr code & Name-->
+                <TextView
+                    android:id="@+id/textViewTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="left"
+                    android:text="Dr. Ref"
+                    android:textColor="@color/textColorTitleLarge"
+                    android:textSize="@dimen/textSize12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="23dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:background="@drawable/small_card_style2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/editTextDrRefName"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|left"
+                            android:background="@color/md_red_900"
+                            android:backgroundTint="@android:color/transparent"
+                            android:gravity="center"
+                            android:hint="@string/name"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize11sp" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".5"
+                        android:background="@drawable/disable_card_style">
+
+                        <EditText
+                            android:id="@+id/editTextDrRefCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|left"
+                            android:background="@color/textColorTitleLarge"
+                            android:backgroundTint="@android:color/transparent"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:hint="@string/code"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize11sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--Order entry label-->
+            <LinearLayout
+                android:id="@+id/orderEntryForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/account_card_style1"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/textViewOrderItemes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="left"
+                    android:text="@string/orderItems"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSize14sp" />
+
+                <TextView
+                    android:id="@+id/textViewProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="left"
+                    android:text="@string/productName"
+                    android:textColor="@color/textColorTitleLarge"
+                    android:textSize="@dimen/textSize12sp" />
+                <!--Product Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".5"
+                        android:background="@drawable/small_card_style2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/editTextProductName"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|left"
+                            android:background="@color/textColorTitleLarge"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Pack & Trade price entry label-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/pack"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextPack"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/textColorTitleLarge"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTradePrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/tradePrice"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextTradePrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Quantity & Net Amount  entry label-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/quantity"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/small_card_style2">
+
+                            <EditText
+                                android:id="@+id/editTextQuantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/md_red_900"
+                                android:backgroundTint="@android:color/transparent"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="7dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewNetAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/netAmount"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextNetAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="@android:color/transparent"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Button Add-->
+                <Button
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/login_button_style"
+                    android:elevation="5dp"
+                    android:text="@string/add"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <!--Title label-->
+            <TextView
+                android:id="@+id/textViewOrderlistTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="@string/orderList"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize14sp" />
+            <!--Layout View1-->
+            <HorizontalScrollView
+                android:id="@+id/horizontalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewOrderlistTitle"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dip"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/box_style"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--1st label-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="11dp"
+                        android:orientation="horizontal">
+                        <!--1-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewProductNameTitle"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:text="@string/productName"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--2-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft=".5dp"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewQuantityTitle"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:text="@string/quantity"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--3-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft=".5dp"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewPackTitle"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:text="@string/pack"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--4-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft=".5dp"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewTradePriceTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:text="@string/tradePrice"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--5-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft=".5dp"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewNetAmountTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:text="@string/netAmount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--6-->
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft=".5dp"
+                            android:background="@drawable/small_card_black">
+
+                            <TextView
+                                android:id="@+id/textViewAction"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingLeft="2dp"
+                                android:text="@string/action"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--<android.support.v7.widget.RecyclerView
+                        android:id="@+id/recylcerViewSellOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:layout_editor_absoluteX="745dp"
+                        tools:layout_editor_absoluteY="-51dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        />-->
+                    <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                        android:id="@+id/listViewOrderList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="1dp"></com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--Total Entry-->
+            <LinearLayout
+                android:id="@+id/totalOrderForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/account_card_style1"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textViewTotalOrderItemes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="left"
+                    android:text="@string/totalOrderItems"
+                    android:textColor="@color/textColorTitleLarge"
+                    android:textSize="@dimen/textSize12sp" />
+                <!--Total Order Items-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:background="@drawable/disable_card_style">
+
+                        <EditText
+                            android:id="@+id/editTextTotalOrderItems"
+                            android:layout_width="120dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|left"
+                            android:background="@color/textColorTitleLarge"
+                            android:backgroundTint="@android:color/transparent"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:textColor="@color/textColorTitleSmall"
+                            android:textColorHint="@color/textColorTitleSmall"
+                            android:textSize="@dimen/textSize14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Trade & vat value-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTradeValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/tradeValue"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTradeValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:background="@color/textColorTitleLarge"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewVatValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/VatValue"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextVatValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Dis & Net Value-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="23dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewDisValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/disValue"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextDisValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewNetValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="left"
+                            android:text="@string/netValue"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:textSize="@dimen/textSize12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/disable_card_style">
+
+                            <EditText
+                                android:id="@+id/editTextNetValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:backgroundTint="@android:color/transparent"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/textColorTitleSmall"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:textSize="@dimen/textSize14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--Button Submit-->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/login_button_style"
+                android:elevation="5dp"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
